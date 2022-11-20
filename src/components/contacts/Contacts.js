@@ -11,6 +11,29 @@ import {
 import { useFetch,DeleteUser } from "../../utils/functions";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
+import { tableCellClasses } from "@mui/material/TableCell";
+import { styled } from "@mui/material/styles";
+import { pink } from "@mui/material/colors";
+
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
+
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+  "&:nth-of-type(odd)": {
+    backgroundColor: theme.palette.action.hover,
+  },
+  // hide last border
+  "&:last-child td, &:last-child th": {
+    border: 0,
+  },
+}));
 
 const Contacts = ({editUser}) => {
   const { isLoading, contactList } = useFetch();
@@ -21,11 +44,11 @@ const Contacts = ({editUser}) => {
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Username</TableCell>
-              <TableCell align="left">Phone Number</TableCell>
-              <TableCell align="left">Gender</TableCell>
-              <TableCell align="left">Delete</TableCell>
-              <TableCell align="left">Edit</TableCell>
+              <StyledTableCell>Username</StyledTableCell>
+              <StyledTableCell align="left">Phone Number</StyledTableCell>
+              <StyledTableCell align="left">Gender</StyledTableCell>
+              <StyledTableCell align="left">Delete</StyledTableCell>
+              <StyledTableCell align="left">Edit</StyledTableCell>
             </TableRow>
           </TableHead>
 
@@ -36,9 +59,9 @@ const Contacts = ({editUser}) => {
                 <TableRow
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
-                  <TableCell colSpan={5} align="center">
+                  <StyledTableCell colSpan={5} align="center">
                     Loading
-                  </TableCell>
+                  </StyledTableCell>
                 </TableRow>
               ) : contactList?.lenght === 0 ? (
                 // Bilgiler olmadığı,boş olduğu  durumda veri bulunamadı mesajı
@@ -52,22 +75,30 @@ const Contacts = ({editUser}) => {
               ) : (
                 // Bilgiler geldiği zaman aşağıya yazılacak kodlar çalışsın
                 contactList?.map((item, index) => (
-                  <TableRow>
+                  <StyledTableRow>
                     <TableCell align="center">{item.username} </TableCell>
                     <TableCell align="center">{item.phoneNumber} </TableCell>
                     <TableCell align="center">{item.gender} </TableCell>
-                    <TableCell align="center" onClick={()=>DeleteUser(item.id)}>
-                      <DeleteIcon />
+                    <TableCell
+                      align="center"
+                      onClick={() => DeleteUser(item.id)}
+                    >
+                      <DeleteIcon sx={{ color: pink[500] }} />
                     </TableCell>
-                    <TableCell align="center" onClick={()=>editUser(
-                      item.id,
-                      item.username,
-                      item.phoneNumber, 
-                      item.gender
-                    )}>
-                      <EditIcon />
+                    <TableCell
+                      align="center"
+                      onClick={() =>
+                        editUser(
+                          item.id,
+                          item.username,
+                          item.phoneNumber,
+                          item.gender
+                        )
+                      }
+                    >
+                      <EditIcon color="success"/>
                     </TableCell>
-                  </TableRow>
+                  </StyledTableRow>
                 ))
               )
             }

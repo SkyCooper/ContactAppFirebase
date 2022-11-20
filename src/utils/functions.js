@@ -3,7 +3,7 @@
 import { getDatabase, ref, set,push, onValue, remove,update } from "firebase/database";
 import firebase from "./firebase"
 import {useState,useEffect} from "react"
-import Toastify from "./toastify";
+import { ToastifyDelete, ToastifyAdd, ToastifyUpdate } from "./toastify";
 
 
 export const AddUser=(info)=>{
@@ -16,6 +16,7 @@ export const AddUser=(info)=>{
         phoneNumber:info.phoneNumber,
         gender:info.gender
     })
+     ToastifyAdd("Contact Added");
   
 }
 
@@ -47,7 +48,7 @@ export const DeleteUser=(id)=>{
     const db = getDatabase(firebase);
     // const userRef=ref(db,"user/")
     remove(ref(db,"user/"+id))
-    Toastify("Deleted Successfully")
+    ToastifyDelete("Deleted Successfully");
 
 }
 
@@ -59,6 +60,7 @@ export const UpdateUser=(info)=>{
 
     updates["user/"+info.id]=info
 
+    ToastifyUpdate("Contact Updated!");
     return update(ref(db), updates);
 
 }

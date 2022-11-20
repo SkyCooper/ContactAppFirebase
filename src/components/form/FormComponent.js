@@ -39,12 +39,12 @@ const FormComponent = ({info,setInfo,handleSubmit,isAdd}) => {
       <p className="contact-header">
         <div>
           <a
-            href="https://clarusway.com/"
+            href="https://github.com/SkyCooper/ContactAppFirebase"
             className="design"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <code>{"<Clarusway/> "}</code>
+            <code>{"< @Cooper /> "}</code>
           </a>
         </div>
         <span className="design header">design</span>
@@ -97,7 +97,7 @@ const FormComponent = ({info,setInfo,handleSubmit,isAdd}) => {
               </Select>
             </FormControl>
             <Button variant="contained" type="submit" value="Submit">
-            {isAdd}
+              {isAdd}
             </Button>
           </Stack>
         </form>

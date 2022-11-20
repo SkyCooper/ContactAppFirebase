@@ -16,7 +16,7 @@ export const AddUser=(info)=>{
         phoneNumber:info.phoneNumber,
         gender:info.gender
     })
-     ToastifyAdd("Contact Added");
+     ToastifyAdd("New Contact Added");
   
 }
 
@@ -54,13 +54,13 @@ export const DeleteUser=(id)=>{
 
 export const UpdateUser=(info)=>{
     const db=getDatabase(firebase)
-    const userRef=ref(db,"user/")
+    // const userRef=ref(db,"user/")
 
     const updates = {};
 
     updates["user/"+info.id]=info
 
-    ToastifyUpdate("Contact Updated!");
+    ToastifyUpdate("Contact Updated");
     return update(ref(db), updates);
 
 }

@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# Project : Contact App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Check The Live Website ➡️ [Live Website](https://skycooper.github.io)
 
-## Available Scripts
+## Visualization of the Website
 
-In the project directory, you can run:
+![Form](./contact.gif)
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Project aims to create an Contact App using React.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Learning Outcomes
 
-### `npm test`
+At the end of the project, you will be able to;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- improve coding skills within HTML & CSS & JS & ReactJS.
 
-### `npm run build`
+- use git commands (push, pull, commit, add etc.) and Github as Version Control System.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Problem Statement
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- We are adding a new project to our portfolios. So you and your colleagues have started to work on the project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Skeleton
 
-### `npm run eject`
+```
+Project(folder)
+|
+|----README.md
+├── public
+│     └── index.html
+├── src
+│    ├── components
+│    │       ├── contacts
+│    │              ├── Contacts.js
+│    │       ├── form
+│    │              ├── FormComponent.js
+│    ├── utils
+│    │       ├── firebase.js
+│    │       ├── functions.js
+│    │       ├── toastify.js
+│    ├── App.js
+│    ├── App.css
+│    ├── index.js
+│    ├── index.css
+├── env
+└── package.json
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- react-router-dom@6.3
+- google-firebase
+- toastify
+- react-icons
+- material ui
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Overview
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+I mastered HTML & CSS & JS & ReactJS features in this project.
+You can see the visual representation of the website above.
 
-## Learn More
+## Notes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Step 1: Create React App using `npx create-react-app project-name`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Step 2: Push your application into your own public repo on Github
 
-### Code Splitting
+- Step 3: Add project gif to your project and README.md file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Resources
 
-### Analyzing the Bundle Size
+- 🔥 You can use [`firebase`](https://firebase.google.com/) for your own work.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Support
 
-### Making a Progressive Web App
+- Open an Issue, I will check it a soon as possible 👀
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Don't forget to show your support by  ⭐ the project!!
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Quick start
 
-### Deployment
+- Clone this repo using git clone https://github.com/SkyCooper/ContactAppFirebase.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Move to the appropriate directory: cd recipe-app.
 
-### `npm run build` fails to minify
+- Run npm run install in order to install dependencies and clean the git repo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Change configurations in /src/config/config.js according to your cosmicjs bucket.
+
+- Run npm run dev to start the project in dev mode.
+
+- Run npm run build to build the project in /dist folder.
+
+- Now you're ready to rumble!
+
+## Contributing
+
+- Fork it (https://github.com/SkyCooper/ContactAppFirebase)
+
+- Create your feature branch (git checkout -b feature/fooBar)
+
+- Commit your changes (git commit -am 'Add some fooBar')
+
+- Push to the branch (git push origin feature/fooBar)
+
+- Create a new Pull Request
+
+
+# <center> ⌛ Happy Coding ✍ </center>
